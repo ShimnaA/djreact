@@ -1,0 +1,85 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+
+
+
+.#~
+*.*~
+~.#~
+/.#~
+.vscode*
+.idea
+
+venv/
+Pipfile
+Pipfile.lock
+
+# databases
+db.*
+*.sqlite3
+
+#keys
+secrets.json
+.env
+
+#Mac
+.DS_Store
+
+__pycache__/
+
+
+
+/node_modules
+/.pnp
+.pnp.js
+
+
+# testing
+/coverage
+
+# production
+/build
+
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+# .gitignore
+
+# Temporary files
+.#~
+*.*~
+~.#~
+/.#~
+
+debug.log
+
+Pipfile
+
+Pipfile.lock
+
+
+
+Pipfile
+Pipfile.lock
+
+# databases
+db.*
+*.sqlite3
+.idea/
+
+#keys
+secrets.json
+
+#Mac
+.DS_Store
+
+__pycache__/
