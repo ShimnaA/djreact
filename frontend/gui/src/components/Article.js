@@ -24,11 +24,7 @@ const Articles = (props) => {
           pageSize: 3,
         }}
         dataSource={props.data}
-        footer={
-          <div>
-            <b>ant design</b> footer part
-          </div>
-        }
+        
         renderItem={item => (
           <List.Item
             key={item.title}
@@ -47,7 +43,7 @@ const Articles = (props) => {
           >
             <List.Item.Meta
               avatar={<Avatar src={item.avatar} />}
-              title={<a href={item.href}>{item.title}</a>}
+              title={<a href={`/${item.id}`}>{item.title}</a>}
               description={item.description}
             />
             {item.content}
