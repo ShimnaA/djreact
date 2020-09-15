@@ -6,6 +6,7 @@ const { Header, Content, Footer } = Layout;
 
 const CustomLayout = (props) => {
     return(
+       
         <Layout className="layout">
             <Header>
             <div className="logo" />
@@ -24,8 +25,9 @@ const CustomLayout = (props) => {
                     {props.children}
                 </div>
             </Content>
-            <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
+            <Footer style={{ textAlign: 'center' }}>Ant Design</Footer>
         </Layout>
+       
     );
 
 }

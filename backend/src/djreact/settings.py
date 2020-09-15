@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import json
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,7 +22,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '16=y*#&c*djom*^*hu=01%-6z&(w_5v=-jqq^i2d9^y2j!k3$1'
+if os.path.exists('secrets.json'):
+   # read secrets from json file
+   with open('secrets.json') as f:
+        keys = json.loads(f.read())
+        SECRET_KEY =  keys['SECRET_KEY']
+        
+else:
+    SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
+#SECRET_KEY = '16=y*#&c*djom*^*hu=01%-6z&(w_5v=-jqq^i2d9^y2j!k3$1sh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -129,7 +139,8 @@ REST_FRAMEWORK = {
     # Use Django's standard `django.contrib.auth` permissions,
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+       # 'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        'rest_framework.permissions.AllowAny',
     ]
 }
 

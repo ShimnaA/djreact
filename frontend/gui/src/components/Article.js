@@ -1,16 +1,5 @@
 import React from 'react';
-import { List, Avatar, Space } from 'antd';
-import { MessageOutlined, LikeOutlined, StarOutlined } from '@ant-design/icons';
-
-
-
-const IconText = ({ icon, text }) => (
-  <Space>
-    {React.createElement(icon)}
-    {text}
-  </Space>
-);
-
+import { List, Avatar } from 'antd';
 
 const Articles = (props) => {
     return (

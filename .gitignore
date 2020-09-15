@@ -18,9 +18,9 @@ Pipfile.lock
 # databases
 db.*
 *.sqlite3
-
 #keys
 secrets.json
+
 .env
 
 #Mac
@@ -41,6 +41,7 @@ __pycache__/
 # production
 /build
 
+#keys
 
 # misc
 .DS_Store
@@ -76,8 +77,7 @@ db.*
 *.sqlite3
 .idea/
 
-#keys
-secrets.json
+
 
 #Mac
 .DS_Store
