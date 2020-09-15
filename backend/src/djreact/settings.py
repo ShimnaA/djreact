@@ -30,7 +30,7 @@ if os.path.exists('secrets.json'):
         
 else:
     SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
-#SECRET_KEY = '16=y*#&c*djom*^*hu=01%-6z&(w_5v=-jqq^i2d9^y2j!k3$1sh'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True

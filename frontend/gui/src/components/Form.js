@@ -14,7 +14,6 @@ class CustomForm extends React.Component {
   }
   mySubmitHandler = (event, requestType, articleID) => {
     event.preventDefault();
-    alert("You are submitting " + this.state.title + this.state.content + this.state.description + requestType);
     switch ( requestType ) {
       case 'post':
         return axios.post('http://127.0.0.1:8000/api/', {
